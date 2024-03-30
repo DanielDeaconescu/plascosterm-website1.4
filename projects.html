@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google font - Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <!-- Fontawesome -->
@@ -33,16 +34,20 @@
   <body>
     <nav class="navbar navbar-expand-lg sticky-top navbar-light">
       <div class="container">
-        <a
-          href="index.html"
-          class="navbar-brand d-flex justify-content-center align-items-center"
-        >
+        <a href="index.html" class="navbar-brand d-flex justify-content-center align-items-center">
           <img
-            src="images/final_logo_plascosterm.svg"
-            alt="yavin logo"
+            src="images/logo_plascosterm.svg"
+            alt="plascosterm logo"
             class="img-fluid nav-img logo-custom"
           />
-          <span class="fw-bold fs-4">Plascsoterm</span>
+          
+          <div class="navigation-info">
+            <span class="fw-bold fs-4">Plascsoterm</span>
+            <small class="navigation-info-small">
+              Termopane Galați
+            </small>
+            
+          </div>
         </a>
 
         <button
@@ -59,7 +64,7 @@
         <div class="collapse navbar-collapse" id="menuLinks">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a href="index.html" class="nav-link">Acasă</a>
+              <a href="index.html" class="nav-link active">Acasă</a>
             </li>
             <li class="nav-item">
               <a href="about.html" class="nav-link">Despre</a>
@@ -68,12 +73,10 @@
               <a href="services.html" class="nav-link">Servicii</a>
             </li>
             <li class="nav-item">
-              <a href="projects.html" class="nav-link active">Proiecte</a>
+              <a href="projects.html" class="nav-link">Proiecte</a>
             </li>
             <li class="nav-item">
-              <a
-                href="contact.html"
-                class="nav-link btn btn-outline-secondary px-4 mx-4"
+              <a href="contact.html" class="nav-link btn btn-outline-secondary px-4 mx-4"
                 >Contact</a
               >
             </li>
@@ -806,6 +809,17 @@
           </button>
       </div>
       
+    </div>
+
+    <!-- Cookie section -->
+    <div class="container-fluid d-flex justify-content-center cookie-section-container d-none">
+      <div class="cookie-section py-2 text-white">
+        <p>Acest website folosește doar cookie-uri esențiale pentru funcționarea siteului.</p>
+        <div class="container-buttons text-center">
+          <button class="btn btn-success btn-sm text-white ok-btn-custom">Ok</button>
+          <a href="cookies.html" target="_blank" class="btn btn-success text-white btn-sm">Află mai mult</a>
+        </div>
+      </div>
     </div>
 
     <!-- Bootstrap JavaScript -->

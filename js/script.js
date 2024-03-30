@@ -379,6 +379,50 @@ theBody.addEventListener("click", function () {
 
 theBody.addEventListener("click", function () {});
 
+// Cookie section
+
+const okButton = document.querySelector(".ok-btn-custom");
+const cookiePopup = document.querySelector(".cookie-section-container");
+
+createCookieFunction = (cookieName, cookieValue, expiration) => {
+  let date = new Date();
+  date.setTime(date.getTime() + expiration * 24 * 60 * 60 * 1000);
+
+  // Create a variable that holds the expiration date
+
+  const expires = "expires=" + date.toUTCString();
+
+  // Actually creating the cookie
+
+  document.cookie = cookieName + "=" + cookieValue + ";" + expires + "; patg=/";
+};
+
+getCookie = (cookieName) => {
+  const name = cookieName + "=";
+  const cDecoded = decodeURIComponent(document.cookie);
+  const cArr = cDecoded.split("; ");
+  let value;
+  cArr.forEach((val) => {
+    if (val.indexOf(name) === 0) value = val.substring(name.length);
+  });
+
+  return value;
+};
+
+okButton.addEventListener("click", () => {
+  // Make the popup dissapear
+  cookiePopup.classList.add("d-none");
+
+  // Create the cookie function
+  createCookieFunction("essentialCookie", true, 30);
+});
+
+cookieMessage = () => {
+  if (!getCookie("essentialCookie")) cookiePopup.classList.remove("d-none");
+};
+
+window.addEventListener("load", cookieMessage);
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", scrollFunction);
 

@@ -167,8 +167,8 @@ body {
 }
 
 .logo-custom {
-  width: 52px;
-  height: 52px;
+  width: 92px;
+  height: 92px;
 }
 
 .form-message {
@@ -551,7 +551,30 @@ html {
 
 .services-paragraph-header {
   color: #000;
-  font-weight: bolder;
+  font-weight: normal;
+}
+
+.cookie-section-container {
+  background-color: rgba(34, 40, 49, 0.5);
+  position: fixed;
+  bottom: 0;
+}
+
+/* Cookies page */
+.cookies-header-custom {
+  background-image: url("../images/cookie-info.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.navigation-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation-info-small {
+  margin-top: -10px;
 }
 
 @media (max-width: 576px) {

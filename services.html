@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google font - Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <!-- Fontawesome -->
@@ -33,11 +34,15 @@
           class="navbar-brand d-flex justify-content-center align-items-center"
         >
           <img
-            src="images/final_logo_plascosterm.svg"
-            alt="yavin logo"
+            src="images/logo_plascosterm.svg"
+            alt="plascosterm logo"
             class="img-fluid nav-img logo-custom"
           />
-          <span class="fw-bold fs-4">Plascsoterm</span>
+
+          <div class="navigation-info">
+            <span class="fw-bold fs-4">Plascsoterm</span>
+            <small class="navigation-info-small"> Termopane Galați </small>
+          </div>
         </a>
 
         <button
@@ -54,13 +59,13 @@
         <div class="collapse navbar-collapse" id="menuLinks">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a href="index.html" class="nav-link">Acasă</a>
+              <a href="index.html" class="nav-link active">Acasă</a>
             </li>
             <li class="nav-item">
               <a href="about.html" class="nav-link">Despre</a>
             </li>
             <li class="nav-item">
-              <a href="services.html" class="nav-link active">Servicii</a>
+              <a href="services.html" class="nav-link">Servicii</a>
             </li>
             <li class="nav-item">
               <a href="projects.html" class="nav-link">Proiecte</a>
@@ -99,149 +104,114 @@
             Servicii
           </h2>
           <!-- Consultatie -->
-          <div class="col-md-4 mt-3">
-            <div class="card box-shadow custom-card-services">
-              <img
-                src="images/services-consultation.jpg"
-                alt=""
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  <p class="custom-justify">
-                    Fiecare proiect începe cu o consultație gratuită. 
-                  </p>
-                  
-                  
-                  <p class="custom-justify">
-                  Aceasta se
-                  poate desfășura în showroom-ul Plascosterm (Bulevardul
-                  Siderurgiștilor 25, Galați), se poate desfășura telefonic sau
-                  la domiciliul clientului.
-                  </p>
-                </p>
-              </div>
+          <div class="row align-items-center">
+            <div class="col-md-10">
+              <h3 class="display-6">Consultație</h3>
+              <p class="custom-justify">
+                Fiecare proiect începe cu o consultație gratuită. Aceasta se
+                poate desfășura în showroom-ul Plascosterm (Bulevardul
+                Siderurgiștilor 25, Galați), se poate desfășura telefonic sau la
+                domiciliul clientului.
+              </p>
+            </div>
+            <div class="col-md-2">
+              <i class="fas fa-comments fa-4x text-secondary mb-2"></i>
             </div>
           </div>
 
           <!-- Masuratori -->
-          <div class="col-md-4 mt-3">
-            <div class="card box-shadow custom-card-services">
-              <img
-                src="images/services-measurement.jpg"
-                alt=""
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  <p class="custom-justify">
-                    În general, atunci cand facem oferte de preț, pentru a oferi
-                  clienților noștri o sumă estimativă, lucrăm fie pe cotele
-                  furnizate de aceștia, fie pe unele aproximative.
-                  </p>
-                  
-                  <p class="custom-justify">
-                    Atunci când
-                  începem munca la un proiect, refacem măsurătorile, ne asigurăm
-                  de exactitatea acestora și facem corecturile necesare pentru a
-                  ne asigura că totul este în regulă.
-                  </p>
-                  
-                </p>
-              </div>
+          <div class="row align-items-center">
+            <div class="col-md-10">
+              <h3 class="display-6">Măsurători</h3>
+              <p class="custom-justify">
+                În general, atunci cand facem oferte de preț, pentru a oferi
+                clienților noștri o sumă estimativă, lucrăm fie pe cotele
+                furnizate de aceștia, fie pe unele aproximative.
+              </p>
+              <p class="custom-justify">
+                Atunci când începem munca la un proiect, refacem măsurătorile,
+                ne asigurăm de exactitatea acestora și facem corecturile
+                necesare pentru a ne asigura că totul este în regulă.
+              </p>
+            </div>
+            <div class="col-md-2">
+              <i class="fas fa-ruler fa-4x text-secondary mb-2"></i>
             </div>
           </div>
 
           <!-- Montaj -->
-          <div class="col-md-4 mt-3">
-            <div class="card box-shadow custom-card-services">
-              <img
-                src="images/services-build.jpg"
-                alt=""
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <p class="card-text custom-justify">
-                  Un pas esențial în procesul de furnizare al produselor și
-                  serviciilor noastre, montajul este întotdeauna realizat cu
-                  ajutorul unei echipe profesioniste care se ocupă de fiecare
-                  detaliu al montajului și se asigura că fiecare componentă este
-                  instalată corect și în conformitate cu schița lucrării.
-                </p>
-              </div>
+
+          <div class="row align-items-center">
+            <div class="col-md-10">
+              <h3 class="display-6">Montaj</h3>
+              <p class="custom-justify">
+                Un pas esențial în procesul de furnizare al produselor și
+                serviciilor noastre, montajul este întotdeauna realizat cu
+                ajutorul unei echipe profesioniste care se ocupă de fiecare
+                detaliu al montajului și se asigura că fiecare componentă este
+                instalată corect și în conformitate cu schița lucrării.
+              </p>
+            </div>
+            <div class="col-md-2">
+              <i class="fas fa-tools fa-4x text-secondary mb-2"></i>
             </div>
           </div>
 
           <!-- Reglaje -->
-          <div class="col-md-4 mt-3 mb-4">
-            <div class="card box-shadow custom-card-services">
-              <img
-                src="images/services-balance.jpg"
-                alt=""
-                class="card-img-top"
-              />
-              <div class="card-body">
-                <p class="card-text">
-                  <p class="custom-justify">
-                    Realizăm diferite reglaje atât ca parte integrată a
-                  serviciilor nostre (în timpul montajelor și în eventualitatea
-                  apariției anumitor probleme), asigurându-ne astfel că fiecare
-                  componentă a tâmplăriei este ajustată și funcționează
-                  corespunzător, cât și la cererea clienților noștri, ajustând
-                  tâmplăria sau produsele pre-existente.
-                  </p>
-                   
-                  
-                  <p class="custom-justify">
-                    Reglajele ne permit să
-                  asigurăm funcționarea optimă a ferestrelor, ușilor și altor
-                  elemente, indiferent dacă acestea au fost furnizate de noi sau
-                  nu.
-                  </p>
-                  
-                </p>
-              </div>
+          <div class="row align-items-center">
+            <div class="col-md-10">
+              <h3 class="display-6">Reglaje</h3>
+              <p class="custom-justify">
+                Realizăm diferite reglaje atât ca parte integrată a serviciilor
+                nostre (în timpul montajelor și în eventualitatea apariției
+                anumitor probleme), asigurându-ne astfel că fiecare componentă a
+                tâmplăriei este ajustată și funcționează corespunzător, cât și
+                la cererea clienților noștri, ajustând tâmplăria sau produsele
+                pre-existente. Reglajele ne permit să asigurăm funcționarea
+                optimă a ferestrelor, ușilor și altor elemente, indiferent dacă
+                acestea au fost furnizate de noi sau nu.
+              </p>
+            </div>
+            <div class="col-md-2">
+              <i class="fas fa-gear fa-4x text-secondary mb-2"></i>
             </div>
           </div>
 
           <!-- Reparatii -->
-          <div class="col-md-4 mt-3 mb-4">
-            <div class="card box-shadow custom-card-services">
-              <img src="images/services-fix.jpg" alt="" class="card-img-top" />
-              <div class="card-body">
-                <p class="card-text custom-justify">
-                  Deoarece înțelegem importanța funcționării corecte și
-                  eficiente a tâmplăriei PVC și aluminiu, ne dorim să oferim
-                  clienților noștri servicii de reparații clitative și încercăm
-                  să acoperim o gamă cât mai diversă de probleme ce s-ar putea
-                  ivi, precum schimbarea garniturilor deteriorate, repararea
-                  yale-lor sau balamalelor deteriorate și altele.
-                </p>
-              </div>
+
+          <div class="row align-items-center">
+            <div class="col-md-10">
+              <h3 class="display-6">Reparații</h3>
+              <p class="custom-justify">
+                Deoarece înțelegem importanța funcționării corecte și eficiente
+                a tâmplăriei PVC și aluminiu, ne dorim să oferim clienților
+                noștri servicii de reparații clitative și încercăm să acoperim o
+                gamă cât mai diversă de probleme ce s-ar putea ivi, precum
+                schimbarea garniturilor deteriorate, repararea yale-lor sau
+                balamalelor deteriorate și altele.
+              </p>
+            </div>
+            <div class="col-md-2">
+              <i class="fas fa-hammer fa-4x text-secondary mb-2"></i>
             </div>
           </div>
 
           <!-- Inlocuiri -->
-          <div class="col-md-4 mt-3 mb-4">
-            <div class="card box-shadow custom-card-services">
-              <img src="images/services-swap.jpg" alt="" class="card-img-top" />
-              <div class="card-body">
-                <p class="card-text">
-                  <p class="custom-justify">
-                    Pentru a menține siguranța și eficiența energetică a locuinței
-                    tale, uneori este necesar să înlocuim cu totul anumite
-                    componente ale tâmplăriei PVC și aluminiu. 
-                  </p>
-                  
-                  <p class="custom-justify">
-                    Ne propunem să
-                    oferim servicii rapide și eficiente de înlocuire atunci cand
-                    este necesar, astfel încât să venim în ajutorul nevoilor
-                    clienților noștri.
-                  </p>
-                  
-                </p>
-              </div>
+
+          <div class="row align-items-center mb-5">
+            <div class="col-md-10">
+              <h3 class="display-6">Înlocuiri</h3>
+              <p class="custom-justify">
+                Pentru a menține siguranța și eficiența energetică a locuinței
+                tale, uneori este necesar să înlocuim cu totul anumite
+                componente ale tâmplăriei PVC și aluminiu. Ne propunem să oferim
+                servicii rapide și eficiente de înlocuire atunci cand este
+                necesar, astfel încât să venim în ajutorul nevoilor clienților
+                noștri.
+              </p>
+            </div>
+            <div class="col-md-2">
+              <i class="fas fa-rotate fa-4x text-secondary mb-2"></i>
             </div>
           </div>
         </div>
@@ -1276,6 +1246,29 @@
         >
           <i class="bi bi-arrow-up text-white to-top-btn-icon fs-3"></i>
         </button>
+      </div>
+    </div>
+
+    <!-- Cookie section -->
+    <div
+      class="container-fluid d-flex justify-content-center cookie-section-container d-none"
+    >
+      <div class="cookie-section py-2 text-white">
+        <p>
+          Acest website folosește doar cookie-uri esențiale pentru funcționarea
+          siteului.
+        </p>
+        <div class="container-buttons text-center">
+          <button class="btn btn-success btn-sm text-white ok-btn-custom">
+            Ok
+          </button>
+          <a
+            href="cookies.html"
+            target="_blank"
+            class="btn btn-success text-white btn-sm"
+            >Află mai mult</a
+          >
+        </div>
       </div>
     </div>
 
