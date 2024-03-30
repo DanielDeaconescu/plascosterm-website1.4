@@ -531,7 +531,7 @@ html {
 }
 
 .header-custom {
-  background-image: url("/images/workshop-header.jpg");
+  background-image: url("../images/workshop-header.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -543,7 +543,7 @@ html {
 }
 
 .services-header-custom {
-  background-image: url("/images/services-header.jpg");
+  background-image: url("../images/services-header.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
