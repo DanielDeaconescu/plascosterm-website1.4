@@ -628,6 +628,16 @@ html {
   /* styling the form modal for small screens */
   .form-modal {
     min-width: 320px;
+    height: 75vh;
+    padding: 15px !important;
+  }
+
+  .form-control {
+    padding: 5px 10px !important;
+  }
+
+  .custom-btn-small {
+    padding: 5px !important;
   }
 }
 @media (max-width: 992px) {
