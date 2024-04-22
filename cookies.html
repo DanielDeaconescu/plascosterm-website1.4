@@ -154,82 +154,69 @@
     </main>
 
     <!-- Form Modal -->
-    <div class="project-modals">
-      <div id="form_modal" class="modal fade">
-        <div class="modal-dialog modal-lg mt-7">
-          <div class="modal-content bg-light p-5">
-            <div class="row justify-content-center">
-              <div class="col-lg-6 col-md-12">
-                <div class="text-container">
-                  <h2 class="fs-4">Solicită o ofertă de preț</h2>
-                  <p class="custom-justify">
-                    Completează formularul de mai jos și vom reveni cu un mesaj
-                    către tine în cel mai scurt timp.
-                  </p>
-                  <form
-                    name="plascosterm_form"
-                    action="https://formspree.io/f/xyyrdgev"
-                    method="POST"
-                  >
-                    <div class="mb-2">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Nume"
-                        name="name"
-                        required
-                      />
-                    </div>
-
-                    <div class="mb-2">
-                      <input
-                        type="email"
-                        class="form-control"
-                        placeholder="Email"
-                        name="email"
-                      />
-                    </div>
-
-                    <div class="mb-2">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Telefon"
-                        name="phone_number"
-                        required
-                      />
-                    </div>
-
-                    <div class="mb-2">
-                      <textarea
-                        class="form-control"
-                        placeholder="De exemplu: preț închidere balcon"
-                        rows="4"
-                        name="the_message"
-                        required
-                      ></textarea>
-                    </div>
-                    <div class="d-grid mb-2">
-                      <button type="submit" class="btn btn-primary text-white">
-                        Trimite
-                      </button>
-                    </div>
-                    <div class="d-grid">
-                      <button
-                        class="btn btn-secondary text-white cancel-btn-custom"
-                        data-bs-dismiss="modal"
-                      >
-                        Anulează
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="form-modal p-5 rounded-2 no-display">
+      <h2>Solicită o ofertă de preț</h2>
+      <p>
+        Completează formularul de mai jos și vom reveni cu un mesaj către tine
+        în cel mai scurt timp.
+      </p>
+      <form id="myForm" action="https://formspree.io/f/xyyrdgev" method="POST">
+        <div class="mb-2">
+          <input
+            class="form-control form-control-custom"
+            type="text"
+            placeholder="Nume"
+            name="name"
+            required
+          />
         </div>
-      </div>
+        <div class="mb-2">
+          <input
+            class="form-control form-control-custom"
+            type="email"
+            placeholder="Email"
+            name="email"
+          />
+        </div>
+        <div class="mb-2">
+          <input
+            class="form-control form-control-custom"
+            type="text"
+            placeholder="Telefon"
+            name="phone_number"
+            required
+          />
+        </div>
+        <div class="mb-2">
+          <textarea
+            name="the_message"
+            rows="4"
+            class="form-control form-control-custom"
+            placeholder="De exemplu: preț închidere balcon"
+            required
+          ></textarea>
+        </div>
+        <div class="d-grid mb-2">
+          <button
+            type="submit"
+            class="btn btn-primary text-white custom-btn-small"
+          >
+            Trimite
+          </button>
+        </div>
+        <div class="d-grid">
+          <button
+            type="button"
+            class="btn btn-secondary text-white cancel-btn-custom custom-btn-small"
+          >
+            Anuleaza
+          </button>
+        </div>
+      </form>
     </div>
+
+    <!-- overlay for modal -->
+    <div class="overlay no-display"></div>
 
     <!-- Footer -->
     <footer class="footer bg-light pt-6 pb-4">
@@ -266,7 +253,7 @@
                 <a
                   data-bs-toggle="modal"
                   data-bs-target="#form_modal"
-                  class="d-flex align-items-center link-custom"
+                  class="d-flex align-items-center link-custom open-modal"
                   href="#"
                 >
                   <i class="fa-regular fa-message fa-3x text-dark mx-2"></i>
@@ -362,11 +349,9 @@
             Completează formular
           </div>
           <div class="icon-2 form-icon general-icon">
-            <a data-bs-toggle="modal" data-bs-target="#form_modal">
-              <i
-                class="bi bi-chat-square-text text-warning form-button-custom"
-              ></i>
-            </a>
+            <i
+              class="bi bi-chat-square-text text-warning form-button-custom"
+            ></i>
           </div>
         </div>
         <!-- WhatsApp -->

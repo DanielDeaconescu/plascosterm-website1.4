@@ -9,6 +9,8 @@ const theOverlay = document.querySelector(".overlay");
 const formCancelButton = document.querySelector(".cancel-btn-custom");
 // selecting the form HTML element
 const formElement = document.querySelector("#myForm");
+// buttons that open the modal
+const buttonsThatOpenModal = document.querySelectorAll(".open-modal");
 
 // function to display the modal
 const displayModal = function () {
@@ -35,3 +37,4 @@ const closeModal = function () {
 formIcon.addEventListener("click", displayModal);
 theOverlay.addEventListener("click", closeModal);
 formCancelButton.addEventListener("click", closeModal);
+buttonsThatOpenModal.forEach((e) => e.addEventListener("click", displayModal));
