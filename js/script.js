@@ -1,26 +1,48 @@
-function scrollFunction() {
-  const theNavigation = document.querySelector(".navbar");
-  const toTopBtn = document.querySelector("#to-top");
+// function scrollFunction() {
+//   const theNavigation = document.querySelector(".navbar");
+//   const toTopBtn = document.querySelector("#to-top");
 
-  if (window.scrollY > 50) {
-    theNavigation.classList.add("navbar-sticky");
-    toTopBtn.classList.remove("hidden");
-  } else if (window.scrollY < 50) {
-    toTopBtn.classList.add("hidden");
+//   if (window.scrollY > 50) {
+//     theNavigation.classList.add("navbar-sticky");
+//     toTopBtn.classList.remove("hidden");
+//   } else if (window.scrollY < 50) {
+//     toTopBtn.classList.add("hidden");
+//   }
+
+//   window.addEventListener("scroll", () => {
+//     if (window.scrollY > 50) {
+//       theNavigation.classList.add("navbar-sticky");
+//       toTopBtn.classList.remove("hidden");
+//       toTopBtn.style.cursor = "pointer";
+//     } else {
+//       theNavigation.classList.remove("navbar-sticky");
+//       toTopBtn.classList.add("hidden");
+//       toTopBtn.style.cursor = "default";
+//     }
+//   });
+// }
+
+const header = document.querySelector(".header");
+const navbar = document.querySelector(".navbar");
+const navbarHeight = navbar.getBoundingClientRect().height;
+
+const displayStickyNav = function (entries) {
+  const [myEntry] = entries;
+  if (!myEntry.isIntersecting) {
+    navbar.classList.add("navbar-sticky", "sticky-top");
+  } else {
+    navbar.classList.remove("navbar-sticky", "sticky-top");
   }
+};
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      theNavigation.classList.add("navbar-sticky");
-      toTopBtn.classList.remove("hidden");
-      toTopBtn.style.cursor = "pointer";
-    } else {
-      theNavigation.classList.remove("navbar-sticky");
-      toTopBtn.classList.add("hidden");
-      toTopBtn.style.cursor = "default";
-    }
-  });
-}
+const options = {
+  root: null,
+  rootMargin: `-${navbarHeight}px`,
+  threshold: 0,
+};
+
+const headerObserver = new IntersectionObserver(displayStickyNav, options);
+headerObserver.observe(header);
 
 function scrollToTop() {
   document.body.scrollTop = 0;
@@ -424,7 +446,7 @@ cookieMessage = () => {
 window.addEventListener("load", cookieMessage);
 
 // Event Listeners
-document.addEventListener("DOMContentLoaded", scrollFunction);
+// document.addEventListener("DOMContentLoaded", scrollFunction);
 
 document.querySelector("#to-top").addEventListener("click", scrollToTop);
 
